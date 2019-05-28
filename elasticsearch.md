@@ -287,15 +287,17 @@ serviceAccount是否有必要带验证！！
 
 `elasticsearch.kube.com/_cat/nodes?v`
 
-
+![avatar](https://raw.githubusercontent.com/chenjie222/elk_filebeat_kafka/master/image/elasticsearch_node.png)
 
 上图中的node.role包含mdi，分别对呀master、data和ingest。 
 
 `elasticsearch.kube.com/_cat/health?v`
 
+![avatar](https://raw.githubusercontent.com/chenjie222/elk_filebeat_kafka/master/image/elasticsearch_health.png)
+
 ### 4.如果想增加data节点，修改replicas即可
 
-
+修改data节点deployment的replicas即可
 
 
 
@@ -377,7 +379,7 @@ spec:
 
 浏览器访问`kibana.kube.com`   可以看看ES集群的各项运行指标
 
-
+![avatar](https://raw.githubusercontent.com/chenjie222/elk_filebeat_kafka/master/image/kibana_es.png)
 
 
 
@@ -492,7 +494,7 @@ Logstash配置文件通过挂载NFS到容器内部/usr/share/logstash/pipeline�
 
 - 访问Kibana的monitoring，可以看到logstash的相关信息
 
-
+![avatar](https://raw.githubusercontent.com/chenjie222/elk_filebeat_kafka/master/image/kibana_logstash.png)
 
 ## 8.编写YML文件部署filebeat
 
